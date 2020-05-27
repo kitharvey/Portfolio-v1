@@ -291,15 +291,6 @@ body::-webkit-scrollbar {
 #home .about-container img, #projects .about-container img, #about .about-container img {
   height: 150px;
   border-radius: 50%;
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;
-}
-
-#home .about-container img:hover, #projects .about-container img:hover, #about .about-container img:hover {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
 }
 
 #home .about-container .about-details, #projects .about-container .about-details, #about .about-container .about-details {
