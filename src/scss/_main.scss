@@ -1,0 +1,135 @@
+#home, #projects, #about{
+    min-height: 100vh;
+    height: max-content;
+    width: 100%;
+    padding: 0 20%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    .main-text{
+        padding: 50px 0;
+    }
+
+    h1{
+        font-size: 4rem;
+    }
+
+    p{
+        text-transform: none;
+        font-size: 1.2rem;
+    }
+
+
+    .main-buttons-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 40%;
+    }
+
+    .proj-one, .proj-two, .proj-three{
+        cursor: pointer;
+        margin-top: 40px;
+        img{
+            width: 70%;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 1s ease;
+            pointer-events: none;
+        }
+
+        &:hover h1{
+            opacity: .5;
+        }
+
+        &:hover img{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    .about-container{
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        img{
+            height: 150px;
+            border-radius: 50%;
+            filter: grayscale(1);
+            transition: all 500ms ease;
+            &:hover{
+                filter: grayscale(0);
+            }
+        }
+
+        .about-details{
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: row;
+
+            .overview, .tools{
+                width: 50%;
+
+                p{
+                    text-transform: none;
+                    line-height: 1.6;
+                }
+            }
+
+            .tools{
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                flex-direction: column;
+
+                ul{
+                    list-style: none;
+                    text-align: left;
+                    li{
+                        text-align: right;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+        
+    }
+
+}
+
+
+
+
+
+
+
+
+@media (orientation: portrait){
+    #home, #projects, #about{
+        padding: 0 10%;
+
+        .about-container{
+            .about-details{
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                flex-direction: column;
+                .overview, .tools{
+                    width: 100%;
+                }
+            }
+        }
+        
+    }
+    
+}
