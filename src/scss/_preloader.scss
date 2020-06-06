@@ -7,7 +7,13 @@
     align-items: center;
     justify-content: center;
     position: fixed;
+    clip-path: circle(100% at 50% 50%);
     transition: all 250ms ease;
+
+    &.close{
+        clip-path: circle(0% at 50% 50%);
+    }
+
     .preloader{
         border: 5px solid #aaaaaa;
         border-top: 5px solid transparent;
@@ -27,5 +33,6 @@
             transform: rotate(360deg);
         }
     }
+
 }
 

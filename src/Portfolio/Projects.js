@@ -9,22 +9,37 @@ export default function Projects(){
     }
     return(
         <div id="projects">
-        <p style={style}>projects</p>
-        <a className="proj-one" href="https://kitharvey.github.io/Sort-Animation/" target="__blank">
-            <h1>Sort Visualizer</h1>
-            <small>Sorting Algorithms Visualizer Applet</small>
-            <img src={sort} alt="sort visualizer screenshot"/>
-        </a>
-        <a className="proj-two" href="https://kitharvey.github.io/coffee-ecommerce/" target="__blank">
-            <h1>Cockcrow</h1>
-            <small>Coffee Company E-commerce Website</small>
-            <img src={crow} alt="cockcrow screenshot"/>
-        </a>
-        <a className="proj-three" href="https://kitharvey.github.io/Pathfinder/" target="__blank">
-            <h1>Pathfinder</h1>
-            <small>A* Search Algorithm Visualizer</small>
-            <img src={path} alt="pathfinder screenshot"/>
-        </a>
-    </div>
+            <p style={style}>projects</p>
+            <div className="proj-one" >
+                <a className = "details" href="https://kitharvey.github.io/Sort-Animation/" target="__blank">
+                    <h1>Sort Visualizer</h1>
+                    <small>Sorting Algorithms Visualizer Applet</small>
+                </a>
+                <div className = "dropdown">
+                    <img src={sort} alt="sort visualizer screenshot"/>
+                </div>
+                
+            </div>
+            <div className="proj-two" >
+                <a className = "details" href="https://kitharvey.github.io/coffee-ecommerce/" target="__blank">
+                    <h1>Cockcrow</h1>
+                    <small>Coffee Company E-commerce Website</small>
+                </a>
+                <div className = "dropdown">
+                    <img src={crow} alt="cockcrow screenshot"/>
+                </div>
+                
+            </div>
+            <div className="proj-three" >
+                <a className = "details" href="https://kitharvey.github.io/Pathfinder/" target="__blank">
+                    <h1>Pathfinder</h1>
+                    <small>A* Search Algorithm Visualizer</small>
+                </a>
+                <div className = "dropdown">
+                    <img src={path} alt="pathfinder screenshot"/>
+                </div>
+                
+            </div>
+        </div>
     )
 }

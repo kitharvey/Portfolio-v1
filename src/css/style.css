@@ -14,8 +14,15 @@
       -ms-flex-pack: center;
           justify-content: center;
   position: fixed;
+  -webkit-clip-path: circle(100% at 50% 50%);
+          clip-path: circle(100% at 50% 50%);
   -webkit-transition: all 250ms ease;
   transition: all 250ms ease;
+}
+
+.preloader-container.close {
+  -webkit-clip-path: circle(0% at 50% 50%);
+          clip-path: circle(0% at 50% 50%);
 }
 
 .preloader-container .preloader {
@@ -243,32 +250,31 @@ body::-webkit-scrollbar {
 }
 
 #home .proj-one, #home .proj-two, #home .proj-three, #projects .proj-one, #projects .proj-two, #projects .proj-three, #about .proj-one, #about .proj-two, #about .proj-three {
-  cursor: pointer;
   margin-top: 40px;
+  height: 15vh;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
 }
 
-#home .proj-one img, #home .proj-two img, #home .proj-three img, #projects .proj-one img, #projects .proj-two img, #projects .proj-three img, #about .proj-one img, #about .proj-two img, #about .proj-three img {
-  width: 70%;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: -1;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+#home .proj-one .details, #home .proj-two .details, #home .proj-three .details, #projects .proj-one .details, #projects .proj-two .details, #projects .proj-three .details, #about .proj-one .details, #about .proj-two .details, #about .proj-three .details {
+  cursor: pointer;
+}
+
+#home .proj-one .dropdown, #home .proj-two .dropdown, #home .proj-three .dropdown, #projects .proj-one .dropdown, #projects .proj-two .dropdown, #projects .proj-three .dropdown, #about .proj-one .dropdown, #about .proj-two .dropdown, #about .proj-three .dropdown {
+  display: none;
   pointer-events: none;
 }
 
-#home .proj-one:hover h1, #home .proj-two:hover h1, #home .proj-three:hover h1, #projects .proj-one:hover h1, #projects .proj-two:hover h1, #projects .proj-three:hover h1, #about .proj-one:hover h1, #about .proj-two:hover h1, #about .proj-three:hover h1 {
-  opacity: .5;
+#home .proj-one .dropdown img, #home .proj-two .dropdown img, #home .proj-three .dropdown img, #projects .proj-one .dropdown img, #projects .proj-two .dropdown img, #projects .proj-three .dropdown img, #about .proj-one .dropdown img, #about .proj-two .dropdown img, #about .proj-three .dropdown img {
+  width: 40vw;
 }
 
-#home .proj-one:hover img, #home .proj-two:hover img, #home .proj-three:hover img, #projects .proj-one:hover img, #projects .proj-two:hover img, #projects .proj-three:hover img, #about .proj-one:hover img, #about .proj-two:hover img, #about .proj-three:hover img {
-  visibility: visible;
-  opacity: 1;
+#home .proj-one:hover, #home .proj-two:hover, #home .proj-three:hover, #projects .proj-one:hover, #projects .proj-two:hover, #projects .proj-three:hover, #about .proj-one:hover, #about .proj-two:hover, #about .proj-three:hover {
+  height: 70vh;
+}
+
+#home .proj-one:hover .dropdown, #home .proj-two:hover .dropdown, #home .proj-three:hover .dropdown, #projects .proj-one:hover .dropdown, #projects .proj-two:hover .dropdown, #projects .proj-three:hover .dropdown, #about .proj-one:hover .dropdown, #about .proj-two:hover .dropdown, #about .proj-three:hover .dropdown {
+  display: block;
 }
 
 #home .about-container, #projects .about-container, #about .about-container {
