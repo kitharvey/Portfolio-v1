@@ -249,31 +249,31 @@ body::-webkit-scrollbar {
   width: 40%;
 }
 
-#home .proj-one, #home .proj-two, #home .proj-three, #projects .proj-one, #projects .proj-two, #projects .proj-three, #about .proj-one, #about .proj-two, #about .proj-three {
+#home .proj, #projects .proj, #about .proj {
   margin-top: 40px;
   height: 15vh;
   -webkit-transition: all 250ms ease;
   transition: all 250ms ease;
 }
 
-#home .proj-one .details, #home .proj-two .details, #home .proj-three .details, #projects .proj-one .details, #projects .proj-two .details, #projects .proj-three .details, #about .proj-one .details, #about .proj-two .details, #about .proj-three .details {
+#home .proj .details, #projects .proj .details, #about .proj .details {
   cursor: pointer;
 }
 
-#home .proj-one .dropdown, #home .proj-two .dropdown, #home .proj-three .dropdown, #projects .proj-one .dropdown, #projects .proj-two .dropdown, #projects .proj-three .dropdown, #about .proj-one .dropdown, #about .proj-two .dropdown, #about .proj-three .dropdown {
+#home .proj .dropdown, #projects .proj .dropdown, #about .proj .dropdown {
   display: none;
   pointer-events: none;
 }
 
-#home .proj-one .dropdown img, #home .proj-two .dropdown img, #home .proj-three .dropdown img, #projects .proj-one .dropdown img, #projects .proj-two .dropdown img, #projects .proj-three .dropdown img, #about .proj-one .dropdown img, #about .proj-two .dropdown img, #about .proj-three .dropdown img {
+#home .proj .dropdown img, #projects .proj .dropdown img, #about .proj .dropdown img {
   width: 40vw;
 }
 
-#home .proj-one:hover, #home .proj-two:hover, #home .proj-three:hover, #projects .proj-one:hover, #projects .proj-two:hover, #projects .proj-three:hover, #about .proj-one:hover, #about .proj-two:hover, #about .proj-three:hover {
+#home .proj:hover, #projects .proj:hover, #about .proj:hover {
   height: 70vh;
 }
 
-#home .proj-one:hover .dropdown, #home .proj-two:hover .dropdown, #home .proj-three:hover .dropdown, #projects .proj-one:hover .dropdown, #projects .proj-two:hover .dropdown, #projects .proj-three:hover .dropdown, #about .proj-one:hover .dropdown, #about .proj-two:hover .dropdown, #about .proj-three:hover .dropdown {
+#home .proj:hover .dropdown, #projects .proj:hover .dropdown, #about .proj:hover .dropdown {
   display: block;
 }
 
