@@ -30,30 +30,30 @@
     }
 
     .proj{
-        margin-top: 40px;
-        height: 15vh;
+        margin: 40px 0;
+        height: max-content;
         transition: all 250ms ease;
-
         .details{
             cursor: pointer;
-        }
-        
-        .dropdown{
-            display: none;
-            pointer-events: none;
-            img{
-                width: 40vw;
+            h1, small{
+                text-shadow: 5px 5px 10px #000000;
             }
         }
-
-        
-
-        &:hover{
-            height: 70vh;
+        .dropdown{
+            pointer-events: none;
+            img{
+                opacity: 0;
+                width: 40vw;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: all .5s ease-in-out;
+                z-index: -1;
+            }
         }
-
-        &:hover .dropdown{
-            display: block;
+        &:hover .dropdown img{
+            opacity: 1;
         }
     }
 
@@ -103,12 +103,6 @@
     }
 
 }
-
-
-
-
-
-
 
 
 @media (orientation: portrait){

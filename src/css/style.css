@@ -250,8 +250,10 @@ body::-webkit-scrollbar {
 }
 
 #home .proj, #projects .proj, #about .proj {
-  margin-top: 40px;
-  height: 15vh;
+  margin: 40px 0;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   -webkit-transition: all 250ms ease;
   transition: all 250ms ease;
 }
@@ -260,21 +262,29 @@ body::-webkit-scrollbar {
   cursor: pointer;
 }
 
+#home .proj .details h1, #home .proj .details small, #projects .proj .details h1, #projects .proj .details small, #about .proj .details h1, #about .proj .details small {
+  text-shadow: 5px 5px 10px #000000;
+}
+
 #home .proj .dropdown, #projects .proj .dropdown, #about .proj .dropdown {
-  display: none;
   pointer-events: none;
 }
 
 #home .proj .dropdown img, #projects .proj .dropdown img, #about .proj .dropdown img {
+  opacity: 0;
   width: 40vw;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  z-index: -1;
 }
 
-#home .proj:hover, #projects .proj:hover, #about .proj:hover {
-  height: 70vh;
-}
-
-#home .proj:hover .dropdown, #projects .proj:hover .dropdown, #about .proj:hover .dropdown {
-  display: block;
+#home .proj:hover .dropdown img, #projects .proj:hover .dropdown img, #about .proj:hover .dropdown img {
+  opacity: 1;
 }
 
 #home .about-container, #projects .about-container, #about .about-container {
