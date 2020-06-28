@@ -272,7 +272,7 @@ body::-webkit-scrollbar {
 
 #home .proj .dropdown img, #projects .proj .dropdown img, #about .proj .dropdown img {
   opacity: 0;
-  width: 40vw;
+  width: 50vw;
   position: fixed;
   top: 50%;
   left: 50%;

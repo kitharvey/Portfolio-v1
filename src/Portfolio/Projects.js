@@ -22,7 +22,7 @@ export default function Projects(){
                 
             </div>
             <div className="proj" >
-                <a className = "details" href="https://kitharvey.github.io/coffee-ecommerce/" target="__blank">
+                <a className = "details" href="https://kitharvey.github.io/cockcrow/" target="__blank">
                     <h1>Cockcrow</h1>
                     <small>Coffee Company E-commerce Website</small>
                 </a>
