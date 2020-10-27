@@ -8,49 +8,59 @@ export default function Projects(){
     const style = {
         textTransform: 'uppercase'
     }
+
+    const data = [
+        {
+            title: "Sort Visualizer",
+            subtitle: "Sorting Algorithms Visualizer Applet",
+            link: "https://kitharvey.github.io/Sort-Animation/",
+            repo: "https://github.com/kitharvey/Sort-Animation",
+            img: sort,
+        },
+        {
+            title: "Cockcrow",
+            subtitle: "Coffee Company E-commerce Website",
+            link: "https://kitharvey.github.io/cockcrow/",
+            repo: "https://github.com/kitharvey/cockcrow",
+            img: crow,
+        },
+        {
+            title: "Pathfinder",
+            subtitle: "A* Search Algorithm Visualizer",
+            link: "https://kitharvey.github.io/Pathfinder/",
+            repo: "https://github.com/kitharvey/Pathfinder",
+            img: path,
+        },
+        {
+            title: "FX Daily Forecast",
+            subtitle: "FX API Data Presentation",
+            link: "https://kitharvey.github.io/fx-daily-forecast/",
+            repo: "https://github.com/kitharvey/fx-daily-forecast",
+            img: fx,
+        },
+    ]
     return(
         <div id="projects">
             <p style={style}>projects</p>
-            <div className="proj" >
-                <a className = "details" href="https://kitharvey.github.io/Sort-Animation/" target="__blank">
-                    <h1>Sort Visualizer</h1>
-                    <small>Sorting Algorithms Visualizer Applet</small>
-                </a>
-                <div className = "dropdown">
-                    <img src={sort} alt="sort visualizer screenshot"/>
-                </div>
-                
-            </div>
-            <div className="proj" >
-                <a className = "details" href="https://kitharvey.github.io/cockcrow/" target="__blank">
-                    <h1>Cockcrow</h1>
-                    <small>Coffee Company E-commerce Website</small>
-                </a>
-                <div className = "dropdown">
-                    <img src={crow} alt="cockcrow screenshot"/>
-                </div>
-                
-            </div>
-            <div className="proj" >
-                <a className = "details" href="https://kitharvey.github.io/Pathfinder/" target="__blank">
-                    <h1>Pathfinder</h1>
-                    <small>A* Search Algorithm Visualizer</small>
-                </a>
-                <div className = "dropdown">
-                    <img src={path} alt="pathfinder screenshot"/>
-                </div>
-                
-            </div>
-            <div className="proj" >
-                <a className = "details" href="https://kitharvey.github.io/fx-daily-forecast/" target="__blank">
-                    <h1>FX Daily Forecast</h1>
-                    <small>FX API Data Presentation</small>
-                </a>
-                <div className = "dropdown">
-                    <img src={fx} alt="fx screenshot"/>
-                </div>
-                
-            </div>
+            {data.map(({title, subtitle, link, img}) => {
+                return(
+                    <div className="proj-wrapper" >
+                        <div className="proj" >
+                            <div className = "details">
+                                <h1> {title} </h1>
+                                <div className="subtitles" >
+                                    <small className="description" > {subtitle} </small>
+                                    <a className="link" href={link} target="__blank" > <small> repository </small> </a>
+                                    <a className="link" href={link} target="__blank" > <small> website </small> </a> 
+                                </div>
+                            </div>
+                            <div className = "dropdown">
+                                <img src={img} alt="sort visualizer screenshot"/>
+                            </div>
+                        </div>
+                    </div>
+                )
+            })}
         </div>
     )
 }

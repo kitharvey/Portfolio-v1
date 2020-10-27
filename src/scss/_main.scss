@@ -1,3 +1,6 @@
+.wrapper{
+    width: 100%;
+}
 #home, #projects, #about{
     min-height: 100vh;
     height: max-content;
@@ -31,29 +34,44 @@
 
     .proj{
         margin: 40px 0;
-        height: max-content;
+        height: 120px;
+        overflow: hidden;
         transition: all 250ms ease;
+        width: 100%;
         .details{
-            cursor: pointer;
-            h1, small{
-                text-shadow: 5px 5px 10px #000000;
+
+            .subtitles{
+                display: flex;
+                align-items: center;
+                .description{
+                    margin-right: 15px;
+                    height: 20px;
+                }
+                .link{
+                    height: max-content;
+                    margin-right: 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
             }
         }
         .dropdown{
-            pointer-events: none;
+            // pointer-events: none;
+            margin-top: 10px;
             img{
-                opacity: 0;
-                width: 50vw;
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                transition: all .5s ease-in-out;
-                z-index: -1;
+                // opacity: 0;
+                width: 100%;
+                // position: fixed;
+                // top: 50%;
+                // left: 50%;
+                // transform: translate(-50%, -50%);
+                // transition: all .5s ease-in-out;
+                // z-index: -1;
             }
         }
-        &:hover .dropdown img{
-            opacity: 1;
+        &:hover {
+            height: 660px;
         }
     }
 
@@ -105,10 +123,14 @@
 }
 
 
-@media (orientation: portrait){
+@media  (max-width: 800px){
     #home, #projects, #about{
         padding: 0 10%;
-
+        .proj{
+            &:hover{
+                height: max-content;
+            }
+        }
         .about-container{
             .about-details{
                 display: flex;

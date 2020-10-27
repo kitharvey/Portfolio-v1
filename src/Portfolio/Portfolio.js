@@ -1,17 +1,17 @@
 import React from 'react'
-import '../css/style.css';
+// import '../css/style.css';
 import Header from './Header.js'
 import Home from './Home.js'
 import Projects from './Projects.js'
 import About from './About.js'
 import Preloader from './Preloader.js'
-
+import "../scss/style.scss"
 
 
 export default function Portfolio() {
     
     return (
-        <div>
+        <div className="wrapper" > 
             
             <Preloader></Preloader>
             <Header></Header>
@@ -19,7 +19,7 @@ export default function Portfolio() {
             <Projects></Projects>
             <About></About>
             <footer>
-                <small>Hope you like my Portfolio</small>
+                <small>From scratch with ❤️</small>
             </footer>
         </div>
         
