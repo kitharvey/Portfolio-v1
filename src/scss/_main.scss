@@ -57,21 +57,13 @@
             }
         }
         .dropdown{
-            // pointer-events: none;
             margin-top: 10px;
             img{
-                // opacity: 0;
-                width: 100%;
-                // position: fixed;
-                // top: 50%;
-                // left: 50%;
-                // transform: translate(-50%, -50%);
-                // transition: all .5s ease-in-out;
-                // z-index: -1;
+                width: 85%;
             }
         }
         &:hover {
-            height: 660px;
+            height: 700px;
         }
     }
 
