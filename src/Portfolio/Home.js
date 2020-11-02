@@ -7,7 +7,7 @@ export default function Home(){
         <div className="main-text">
             <p className="greet">Hi, my name is</p>
             <h1 className="name">Kit Harvey Caubalejo.</h1>
-            <p className="des">I'm a web developer.</p>
+            <p className="des">I'm a front-end web developer.</p>
             <p className="line">I taught myself how to code and design for web. Now I found my passion and I'm putting it to work.</p>
         </div>
         <div className="main-buttons-container">
