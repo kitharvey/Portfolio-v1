@@ -42,7 +42,7 @@ export default function Projects(){
     return(
         <div id="projects">
             <p style={style}>projects</p>
-            {data.map(({title, subtitle, link, img}) => {
+            {data.map(({title, subtitle, link, repo, img}) => {
                 return(
                     <div className="proj-wrapper" >
                         <div className="proj" >
@@ -50,7 +50,7 @@ export default function Projects(){
                                 <h1> {title} </h1>
                                 <div className="subtitles" >
                                     <small className="description" > {subtitle} </small>
-                                    <a className="link" href={link} target="__blank" > <small> repository </small> </a>
+                                    <a className="link" href={repo} target="__blank" > <small> repository </small> </a>
                                     <a className="link" href={link} target="__blank" > <small> website </small> </a> 
                                 </div>
                             </div>
