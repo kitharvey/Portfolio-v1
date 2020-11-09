@@ -3,6 +3,7 @@ import sort from '../photo/sort.jpg'
 import crow from '../photo/crow.jpg'
 import path from '../photo/path.jpg'
 import fx from '../photo/fx.jpg'
+import gif from '../photo/gifascii.jpg'
 
 export default function Projects(){
     const style = {
@@ -37,6 +38,13 @@ export default function Projects(){
             link: "https://kitharvey.github.io/fx-daily-forecast/",
             repo: "https://github.com/kitharvey/fx-daily-forecast",
             img: fx,
+        },
+        {
+            title: "ASCII GIF Converter",
+            subtitle: "GIF Rendered each Frame in ASCII",
+            link: "https://kitharvey.github.io/gif-to-ascii/",
+            repo: "https://github.com/kitharvey/gif-to-ascii",
+            img: gif,
         },
     ]
     return(
