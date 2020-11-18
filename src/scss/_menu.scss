@@ -6,7 +6,7 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background: #101010;
+    background: var(--bg-color);
     position: fixed;
     clip-path: circle(0% at 100% -10%);
     transition: all .5s ease;
@@ -45,6 +45,15 @@
             margin-top: 20px;
             a{
                 margin-right: 10px;
+            }
+        }
+
+        .theme{
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 1rem;
+            &:hover{
+                opacity: .8;
             }
         }
     }

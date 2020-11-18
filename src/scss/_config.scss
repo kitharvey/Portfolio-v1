@@ -6,14 +6,28 @@
     box-sizing: border-box;
 }
 
+html[data-theme='dark']{
+    --bg-color:  #101010;
+    --text-color:  #ddd;
+}
+
+html{
+    --bg-color:  #eeeeee;
+    --text-color:  #101010;
+}
+
+
+
 body{
     font-family: -apple-system, BlinkMacSystemFont, 'Oswald', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
     text-transform: uppercase;
-    background: #101010;
-    color: #ddd;
+    background: var(--bg-color);
+    color: var(--text-color);
     scroll-behavior: smooth;
+    transition: background .25s ease, color .5s ease;
+    
     a{
         text-decoration: none;
         color: currentColor;

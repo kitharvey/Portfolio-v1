@@ -19,7 +19,7 @@ export default function Portfolio() {
             <Projects></Projects>
             <About></About>
             <footer>
-                <small>From scratch with ❤️</small>
+                <small>From scratch with <span role="img" aria-label="heart" >❤️</span></small>
             </footer>
         </div>
         

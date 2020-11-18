@@ -50,9 +50,9 @@ export default function Projects(){
     return(
         <div id="projects">
             <p style={style}>projects</p>
-            {data.map(({title, subtitle, link, repo, img}) => {
+            {data.map(({title, subtitle, link, repo, img}, index) => {
                 return(
-                    <div className="proj-wrapper" >
+                    <div className="proj-wrapper" key={index}>
                         <div className="proj" >
                             <div className = "details">
                                 <h1> {title} </h1>

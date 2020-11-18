@@ -15,9 +15,10 @@
         
         .logo{
             margin-right: auto;
-            img{
+            svg{
                 width: 50px;
-                height: auto;
+                height: 33px;
+                fill: currentColor;
             }
         }
         .theme{

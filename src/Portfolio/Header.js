@@ -1,14 +1,26 @@
-import React, {useState} from 'react'
-import logo from "../photo/logo.svg"
+import React, {useEffect, useState} from 'react'
+import Logo from '../photo/Logo';
 import resume from "../photo/resume.pdf"
 
 export default function Header(){
     const [ isOpen, setOpener ] = useState(false);
+    const theme = localStorage.getItem('theme')
+    const [themeState, setThemeState] = useState(theme ? theme : 'light')
+
+    useEffect(() => {
+        themeState === 'light' ? document.documentElement.setAttribute('data-theme', 'dark') : document.documentElement.setAttribute('data-theme', 'light')
+        themeState === 'light' ? localStorage.setItem('theme', 'dark') : localStorage.setItem('theme', 'light')
+    }, [themeState])
+
+    const handleToggle = () => {
+        themeState === 'light' ? setThemeState('dark') : setThemeState('light')
+    }
+
     return (
         <div className="header">
             <div className="nav">
                 <div className="logo">
-                    <img src= {logo} alt="" srcSet="" />
+                    <Logo />
                 </div>
 
                 <div className="burger" onClick={()=>setOpener(!isOpen)}>
@@ -23,13 +35,14 @@ export default function Header(){
                     </div>
                     <div className="port">
                         <h1>Kit Harvey Caubalejo</h1>
-                        <p>Web Developer</p>
+                        <p>Front-End Web Developer</p>
                         <p>Portfolio</p>
                         <div className="links">
                             <a href={resume} target="__blank"> resume</a> 
                             <a href="https://github.com/kitharvey" target="__blank"> github</a>
                             <a className="touch" href="mailto:kitharveycaubalejo@gmail.com" target="__blank" > email</a>
                         </div>
+                        <div className="theme" onClick={handleToggle} >switch to {themeState} mode</div>
                     </div>
                     
                 </div>
