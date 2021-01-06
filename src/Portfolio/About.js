@@ -23,6 +23,8 @@ export default function About(){
                     <h1>tools</h1>
                     <ul>
                         <li>JavaScript/HTML/CSS/SCSS</li>
+                        <li>TypeScript</li>
+                        <li>TailwindCSS</li>
                         <li>React.js</li>
                         <li>GraphQL</li>
                         <li>Node.js</li>
