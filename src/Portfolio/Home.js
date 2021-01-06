@@ -12,13 +12,16 @@ export default function Home(){
         </div>
         <div className="main-buttons-container">
             <div className="main-buttons">
-                <a href={resume} target="__blank"> resume</a> 
+                <a href={resume} target="__blank">resume</a> 
             </div>
             <div className="main-buttons">
-                <a href="https://github.com/kitharvey" target="__blank"> github</a>
+                <a href="https://github.com/kitharvey" target="__blank">github</a>
             </div>
             <div className="main-buttons">
-                <a href="mailto:kitharveycaubalejo@gmail.com" target="__blank" > kitharveycaubalejo@gmail.com</a>
+                <a href="mailto:kitharveycaubalejo@gmail.com" target="__blank" >email</a>
+            </div>
+            <div className="main-buttons">
+                <a href="https://www.linkedin.com/in/kitharvey/" target="__blank" >linkedin</a>
             </div>
         </div>
     </div>

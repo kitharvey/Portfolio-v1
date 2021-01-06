@@ -8,8 +8,8 @@ export default function Header(){
     const [themeState, setThemeState] = useState(theme ? theme : 'light')
 
     useEffect(() => {
-        themeState === 'light' ? document.documentElement.setAttribute('data-theme', 'dark') : document.documentElement.setAttribute('data-theme', 'light')
-        themeState === 'light' ? localStorage.setItem('theme', 'dark') : localStorage.setItem('theme', 'light')
+        themeState === 'light' ? document.documentElement.setAttribute('data-theme', 'light') : document.documentElement.setAttribute('data-theme', 'dark')
+        themeState === 'light' ? localStorage.setItem('theme', 'light') : localStorage.setItem('theme', 'dark')
     }, [themeState])
 
     const handleToggle = () => {
@@ -38,11 +38,12 @@ export default function Header(){
                         <p>Front-End Web Developer</p>
                         <p>Portfolio</p>
                         <div className="links">
-                            <a href={resume} target="__blank"> resume</a> 
-                            <a href="https://github.com/kitharvey" target="__blank"> github</a>
-                            <a className="touch" href="mailto:kitharveycaubalejo@gmail.com" target="__blank" > email</a>
+                            <a href={resume} target="__blank">resume</a> 
+                            <a href="https://github.com/kitharvey" target="__blank">github</a>
+                            <a href="mailto:kitharveycaubalejo@gmail.com" target="__blank" >email</a>
+                            <a href="https://www.linkedin.com/in/kitharvey/" target="__blank" >linkedin</a>
                         </div>
-                        <div className="theme" onClick={handleToggle} >switch to {themeState} mode</div>
+                        <div className="theme" onClick={handleToggle} >{themeState} mode</div>
                     </div>
                     
                 </div>
